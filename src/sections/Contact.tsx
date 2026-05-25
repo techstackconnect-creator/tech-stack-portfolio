@@ -112,7 +112,7 @@ export default function Contact() {
 
           <div className="mt-6 grid gap-8 lg:grid-cols-[1.1fr_1.4fr] lg:items-end">
             <div>
-              <h2 className="text-4xl font-semibold tracking-tight leading-[1.05] md:text-6xl">
+              <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight leading-[1.05] lg:whitespace-nowrap">
                 Let’s build something memorable.
               </h2>
 
