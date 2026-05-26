@@ -12,9 +12,22 @@ export default function Footer() {
 
           {/* Brand Column (Takes 5 slots in medium screen) */}
           <div className="md:col-span-5 space-y-4">
-            <h2 className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-400 to-purple-500">
-              Qodex.Tech
-            </h2>
+            <a
+            href="/"
+            className="group flex items-center text-lg font-bold tracking-wide text-white"
+          >
+            {/* Q LOGO */}
+            <img
+              src="/OurLogo.png"
+              alt="Q"
+              className="h-9 w-9 object-contain"
+            />
+
+            {/* TEXT */}
+            <span className="-ml-0">
+              odex<span className="text-indigo-400">.Tech</span>
+            </span>
+          </a>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-sm">
               Riding the wave of innovation. We build high-performance web applications and digital experiences that scale.
             </p>
