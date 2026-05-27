@@ -155,41 +155,28 @@ export default function Hero() {
 
           {/* Small Label */}
           <p className="font-mono text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] uppercase text-zinc-400 mb-5 sm:mb-6">
-            Freelance Web Design
+            Modern Web Development Studio
           </p>
 
           {/* Heading */}
           <h1 className="text-[2.5rem] leading-[1.05] sm:text-6xl lg:text-7xl font-bold tracking-tight">
 
             <span className="block text-white">
-              We Build Digital
+              We Build Fast &
             </span>
 
             <span className="block mt-2 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              Experiences People Remember
+              Memorable Digital Experiences
             </span>
 
           </h1>
 
           {/* Description */}
           <p className="mt-6 sm:mt-8 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-lg text-zinc-400 leading-relaxed px-2 sm:px-0">
-            Premium digital interfaces crafted for modern brands —
-            blending performance, aesthetics, and immersive user experiences.
+            Premium websites and scalable web applications crafted for
+            modern brands — combining clean design, seamless user
+            experience, and high-performance development.
           </p>
-
-          {/* CTA */}
-          {/* <div className="mt-8 sm:mt-10">
-
-            <a
-              href="#work"
-              className="group inline-flex items-center gap-2 sm:gap-3 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-6 sm:px-8 py-3.5 sm:py-4 text-xs sm:text-sm font-medium text-white transition-all duration-300 hover:bg-indigo-500/20 hover:border-indigo-500/50 hover:shadow-[0_0_35px_rgba(99,102,241,0.45)]"
-            >
-              View Our Work
-
-              <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-
-          </div> */}
 
         </div>
       </div>

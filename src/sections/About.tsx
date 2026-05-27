@@ -13,7 +13,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <Reveal>
             <p className="font-mono text-xs tracking-[0.3em] text-zinc-400 uppercase mb-3">
-              03 — Studio
+              03 — Who We Are
             </p>
             <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
               We craft digital experiences that feel timeless.
@@ -21,15 +21,16 @@ export default function About() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg text-zinc-400 leading-relaxed">
-              STUDIO is an independent design practice working with founders and
-              forward-thinking teams. We partner closely on visual identity, web
-              design and product interfaces — pairing editorial sensibility with
-              modern engineering to ship work that lasts beyond a launch cycle.
+              Qodex Tech is a modern web development studio focused on building
+              fast, scalable, and visually engaging digital experiences. We work
+              closely with startups, businesses, and creators to craft premium
+              websites and web applications that combine clean design, seamless
+              user experience, and modern development technologies.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-20 grid grid-cols-3 gap-6 border-t border-white/[0.08] pt-10">
+        {/* <div className="mt-20 grid grid-cols-3 gap-6 border-t border-white/[0.08] pt-10">
           {stats.map((s, i) => (
             <Reveal key={s.l} delay={i * 0.08}>
               <div>
@@ -40,7 +41,7 @@ export default function About() {
               </div>
             </Reveal>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
