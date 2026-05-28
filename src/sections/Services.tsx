@@ -41,7 +41,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="font-mono text-xs tracking-[0.3em] text-zinc-400 uppercase mb-3">
-            02 — Services
+            Services
           </p>
           <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-16">
             What we do

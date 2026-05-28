@@ -134,7 +134,7 @@ ${formData.message}
             {/* LEFT SIDE */}
             <div>
               <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-zinc-400">
-                04 — Get In Touch
+                Get In Touch
               </p>
 
               <h3 className="text-4xl font-semibold tracking-tight md:text-5xl">

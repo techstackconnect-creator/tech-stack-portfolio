@@ -1,76 +1,90 @@
-import { ArrowRight } from "lucide-react";
-import Reveal from "../components/Reveal";
+import React from "react";
+import { CheckCircle2 } from "lucide-react";
 
-export default function About() {
+function About() {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden border-t border-white/[0.08] py-32 px-6 lg:px-10"
-    >
-      {/* Glow */}
-      <div className="absolute top-0 left-1/3 h-[400px] w-[400px] rounded-full bg-indigo-600/20 blur-[140px]" />
-      <div className="absolute bottom-0 right-1/3 h-[400px] w-[400px] rounded-full bg-purple-600/20 blur-[140px]" />
+    <section className="relative overflow-hidden border-b border-white/[0.08] py-24 px-6">
+      
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-indigo-500/20 blur-[140px]" />
+      <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-purple-500/20 blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        
+        <div className="mb-16 text-center">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-zinc-500">
+            Why Choose Us
+          </p>
+
+          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
+            What Makes Us Different
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           
-          {/* Left */}
-          <Reveal>
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-zinc-400">
-              01 — Who We Are
-            </p>
-
-            <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-              We create premium digital experiences for modern brands.
-            </h2>
-          </Reveal>
-
-          {/* Right */}
-          <Reveal delay={0.1}>
-            <div>
-              <p className="text-lg leading-relaxed text-zinc-400">
-                Tech stack is a modern web development studio focused on
-                building fast, scalable, and visually engaging websites and web
-                applications. We combine clean UI design with modern
-                technologies to help businesses create a strong digital
-                presence.
-              </p>
-
-              {/* Highlights */}
-              <div className="mt-10 space-y-4">
-                {[
-                  "Modern & responsive web experiences",
-                  "High-performance development architecture",
-                  "Clean UI/UX focused on conversions",
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-zinc-950/50 px-5 py-4"
-                  >
-                    <div className="h-2 w-2 rounded-full bg-indigo-400" />
-
-                    <p className="text-sm text-zinc-300">
-                      {item}
-                    </p>
-                  </div>
-                ))}
+          {[
+            {
+              title: "High-Performance Development",
+              desc: "Optimized code structure and modern technologies ensure lightning-fast loading speeds and smooth performance.",
+            },
+            {
+              title: "Clean & Modern UI/UX",
+              desc: "We design visually engaging interfaces focused on usability, accessibility, and user experience.",
+            },
+            {
+              title: "Fully Responsive Design",
+              desc: "Your website will look and perform perfectly across desktops, tablets, and mobile devices.",
+            },
+            {
+              title: "SEO-Friendly Architecture",
+              desc: "Built with best SEO practices to improve visibility, rankings, and organic traffic growth.",
+            },
+            {
+              title: "Scalable Solutions",
+              desc: "Our systems are designed to grow with your business and support future expansion effortlessly.",
+            },
+            {
+              title: "Latest Technologies",
+              desc: "We use modern frameworks and development standards to deliver secure and future-ready products.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-zinc-950/70 p-8 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-indigo-500/40 hover:shadow-[0_0_45px_rgba(99,102,241,0.25)]"
+            >
+              
+              {/* Animated Glow */}
+              <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                <div className="absolute -top-24 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl" />
+                <div className="absolute bottom-0 right-0 h-32 w-32 rounded-full bg-purple-500/20 blur-3xl" />
               </div>
 
-              {/* CTA */}
-              <div className="mt-10">
-                <a
-                  href="/about"
-                  className="group inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:border-indigo-500/50 hover:bg-indigo-500/20 hover:shadow-[0_0_35px_rgba(99,102,241,0.45)]"
-                >
-                  Learn More
+              {/* Top Border Glow */}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
+              {/* Content */}
+              <div className="relative z-10">
+                
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 transition-all duration-500 group-hover:border-indigo-400/40 group-hover:bg-indigo-500/20 group-hover:shadow-[0_0_25px_rgba(99,102,241,0.45)]">
+                  <CheckCircle2 className="h-6 w-6 text-indigo-400" />
+                </div>
+
+                <h3 className="mb-3 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-indigo-300">
+                  {item.title}
+                </h3>
+
+                <p className="leading-relaxed text-zinc-400">
+                  {item.desc}
+                </p>
+
               </div>
             </div>
-          </Reveal>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
+export default About;

@@ -55,7 +55,7 @@ export default function Technologies() {
         {/* HEADING */}
         <Reveal>
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-zinc-400">
-            03 — Technologies
+            Technologies
           </p>
 
           <h2 className="mb-16 text-4xl font-semibold tracking-tight lg:text-5xl">
