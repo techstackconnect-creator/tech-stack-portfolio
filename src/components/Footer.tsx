@@ -154,7 +154,7 @@ export default function Footer() {
 
               {/* RAVE */}
               <a
-                href="https://rave.com"
+                href="https://www.rave.works/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
