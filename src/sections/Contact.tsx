@@ -8,6 +8,7 @@ import {
   Linkedin,
   Facebook,
 } from "lucide-react";
+import { SiX } from "react-icons/si";
 import { toast } from "sonner";
 import Reveal from "../components/Reveal";
 
@@ -211,8 +212,11 @@ ${formData.message}
                       </p>
 
                       <p className="text-sm text-white sm:text-base">
-                        +91 8136951157
+                        +91 81369 51157
                       </p>
+                      {/* <p className="text-sm sm:text-base text-white">
+                        +91 96560 05506
+                      </p> */}
                     </div>
                   </div>
                 </div>
@@ -254,7 +258,7 @@ ${formData.message}
                   </a>
 
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/tech-stack-785a98412/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] sm:h-12 sm:w-12"
@@ -262,17 +266,25 @@ ${formData.message}
                     <Linkedin className="h-5 w-5" />
                   </a>
 
-                  <a
+                  {/* <a
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] sm:h-12 sm:w-12"
                   >
                     <Facebook className="h-5 w-5" />
-                  </a>
+                  </a> */}
+                  {/* <a
+                    href="https://x.com/teckstackCo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
+                  >
+                    <SiX className="h-5 w-5" />
+                  </a> */}
 
                   <a
-                    href="https://www.rave.works/"
+                    href="https://www.rave.works/profile/techstack"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] sm:h-12 sm:w-12"

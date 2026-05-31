@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { SiX } from "react-icons/si";
+import { Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -128,20 +130,27 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* LinkedIn */}
-              <a
-                href="https://linkedin.com"
+              {/* <a
+                href="https://x.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-700 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_18px_rgba(99,102,241,0.7)] transition-all duration-300"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="-3 0 24 24">
-                  <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.53-1 1.82-2.2 3.75-2.2 4 0 4.75 2.63 4.75 6.05V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.85-2.75 3.78V24h-4V8z" />
-                </svg>
+                <SiX className="h-5 w-5" />
+              </a> */}
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/tech-stack-785a98412/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
 
               {/* Facebook */}
-              <a
+              {/* <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -150,11 +159,11 @@ export default function Footer() {
                 <svg className="w-5 h-5" fill="currentColor" viewBox="-1 0 24 24">
                   <path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.78-3.88 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0022 12z" />
                 </svg>
-              </a>
+              </a> */}
 
               {/* RAVE */}
               <a
-                href="https://www.rave.works/"
+                href="https://www.rave.works/profile/techstack"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"

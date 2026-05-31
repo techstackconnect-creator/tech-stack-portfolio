@@ -10,7 +10,9 @@ import {
     Instagram,
     Linkedin,
     Facebook,
+    Twitter
 } from "lucide-react";
+import { SiX } from "react-icons/si";
 
 function ContactPage() {
     const initialFormData = {
@@ -37,74 +39,74 @@ function ContactPage() {
         });
     };
 
-const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-) => {
-    e.preventDefault();
+    const handleSubmit = async (
+        e: React.FormEvent<HTMLFormElement>
+    ) => {
+        e.preventDefault();
 
-    // EMPTY FIELD VALIDATION
-    if (
-        !formData.name ||
-        !formData.email ||
-        !formData.phone ||
-        !formData.message
-    ) {
-        setSubmitState("error");
-        setStatusMessage("Please complete all fields.");
+        // EMPTY FIELD VALIDATION
+        if (
+            !formData.name ||
+            !formData.email ||
+            !formData.phone ||
+            !formData.message
+        ) {
+            setSubmitState("error");
+            setStatusMessage("Please complete all fields.");
 
-        toast.error("Please complete all fields.");
+            toast.error("Please complete all fields.");
 
-        return;
-    }
+            return;
+        }
 
-    // EMAIL VALIDATION
-    const emailRegex =
-        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|edu|gov|co)$/i;
+        // EMAIL VALIDATION
+        const emailRegex =
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|edu|gov|co)$/i;
 
-    if (!emailRegex.test(formData.email)) {
-        setSubmitState("error");
+        if (!emailRegex.test(formData.email)) {
+            setSubmitState("error");
 
-        setStatusMessage(
-            "Please enter a valid email address."
-        );
+            setStatusMessage(
+                "Please enter a valid email address."
+            );
 
-        toast.error("Please enter a valid email address.");
+            toast.error("Please enter a valid email address.");
 
-        return;
-    }
+            return;
+        }
 
-    // PHONE VALIDATION
-    const phoneRegex = /^[0-9]{10}$/;
+        // PHONE VALIDATION
+        const phoneRegex = /^[0-9]{10}$/;
 
-    if (!phoneRegex.test(formData.phone)) {
-        setSubmitState("error");
+        if (!phoneRegex.test(formData.phone)) {
+            setSubmitState("error");
 
-        setStatusMessage(
-            "Please enter a valid 10-digit phone number."
-        );
+            setStatusMessage(
+                "Please enter a valid 10-digit phone number."
+            );
 
-        toast.error(
-            "Please enter a valid 10-digit phone number."
-        );
+            toast.error(
+                "Please enter a valid 10-digit phone number."
+            );
 
-        return;
-    }
+            return;
+        }
 
-    setSubmitState("submitting");
-    setStatusMessage("");
+        setSubmitState("submitting");
+        setStatusMessage("");
 
-    try {
-        // SAVE TO GOOGLE SHEET
-        await fetch(
-            "https://script.google.com/macros/s/AKfycbwQygomE7WyxPh5E5Z3HQIW0hJ8HqxRCEB3sYtxdpU4zuzDj-fYc4uEYifwP6THXJ-9/exec",
-            {
-                method: "POST",
-                body: JSON.stringify(formData),
-            }
-        );
+        try {
+            // SAVE TO GOOGLE SHEET
+            await fetch(
+                "https://script.google.com/macros/s/AKfycbwQygomE7WyxPh5E5Z3HQIW0hJ8HqxRCEB3sYtxdpU4zuzDj-fYc4uEYifwP6THXJ-9/exec",
+                {
+                    method: "POST",
+                    body: JSON.stringify(formData),
+                }
+            );
 
-        // WHATSAPP MESSAGE
-        const whatsappMessage = `
+            // WHATSAPP MESSAGE
+            const whatsappMessage = `
 New Contact Form 🚀
 
 Name: ${formData.name}
@@ -115,38 +117,38 @@ Message:
 ${formData.message}
 `;
 
-        const phoneNumber = "918136951157";
+            const phoneNumber = "918136951157";
 
-        window.open(
-            `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                whatsappMessage
-            )}`,
-            "_blank"
-        );
+            window.open(
+                `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                    whatsappMessage
+                )}`,
+                "_blank"
+            );
 
-        setSubmitState("success");
+            setSubmitState("success");
 
-        setStatusMessage(
-            "Thanks! Your message has been successfully sent."
-        );
+            setStatusMessage(
+                "Thanks! Your message has been successfully sent."
+            );
 
-        toast.success("Message sent successfully.");
+            toast.success("Message sent successfully.");
 
-        setFormData(initialFormData);
+            setFormData(initialFormData);
 
-    } catch (error) {
-        setSubmitState("error");
+        } catch (error) {
+            setSubmitState("error");
 
-        const message =
-            error instanceof Error
-                ? error.message
-                : "Something went wrong while sending your message.";
+            const message =
+                error instanceof Error
+                    ? error.message
+                    : "Something went wrong while sending your message.";
 
-        setStatusMessage(message);
+            setStatusMessage(message);
 
-        toast.error(message);
-    }
-};
+            toast.error(message);
+        }
+    };
     return (
         <>
             <Navbar />
@@ -245,9 +247,12 @@ ${formData.message}
                                                 +91 98765 43210
                                             </p>
 
-                                            <p className="text-sm sm:text-base text-zinc-400">
-                                                +91 8136951157
+                                            <p className="text-sm sm:text-base text-white">
+                                                +91 81369 51157
                                             </p>
+                                            {/* <p className="text-sm sm:text-base text-white">
+                                                +91 96560 05506
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -289,7 +294,7 @@ ${formData.message}
                                     </a>
 
                                     <a
-                                        href="https://linkedin.com"
+                                        href="https://www.linkedin.com/in/tech-stack-785a98412/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
@@ -297,17 +302,25 @@ ${formData.message}
                                         <Linkedin className="h-5 w-5" />
                                     </a>
 
-                                    <a
+                                    {/* <a
                                         href="https://facebook.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
                                     >
                                         <Facebook className="h-5 w-5" />
-                                    </a>
+                                    </a> */}
+                                    {/* <a
+                                        href="https://x.com/teckstackCo"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
+                                    >
+                                        <SiX className="h-5 w-5" />
+                                    </a> */}
 
                                     <a
-                                        href="https://www.rave.works/"
+                                        href="https://www.rave.works/profile/techstack"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-zinc-700 text-zinc-400 transition-all duration-300 hover:border-indigo-500 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"
