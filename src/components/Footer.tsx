@@ -88,7 +88,7 @@ export default function Footer() {
                   </svg>
                 </div>
 
-                <span>+91 98765 43210</span>
+                <span>+91 89439 26520</span>
               </p>
 
               <p
