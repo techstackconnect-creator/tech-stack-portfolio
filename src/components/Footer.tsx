@@ -104,7 +104,7 @@ export default function Footer() {
                   </svg>
                 </div>
 
-                <span>+91 98765 43210</span>
+                <span>+91 81369 51157</span>
               </p>
               <p className="flex items-center space-x-3 hover:text-white transition-colors group">
                 <div className="p-2 bg-zinc-900 rounded-lg group-hover:bg-zinc-800 transition-colors">
