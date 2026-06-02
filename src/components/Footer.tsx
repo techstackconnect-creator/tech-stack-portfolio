@@ -106,6 +106,31 @@ export default function Footer() {
 
                 <span>+91 98765 43210</span>
               </p>
+              <p className="flex items-center space-x-3 hover:text-white transition-colors group">
+                <div className="p-2 bg-zinc-900 rounded-lg group-hover:bg-zinc-800 transition-colors">
+                  <svg
+                    className="w-4 h-4 text-zinc-400 group-hover:text-red-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+
+                <span>Tirur, Malappuram, Kerala - 676101</span>
+              </p>
             </div>
           </div>
 

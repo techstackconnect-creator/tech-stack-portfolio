@@ -270,7 +270,7 @@ ${formData.message}
                                         </p>
 
                                         <p className="mt-2 text-sm sm:text-base text-white">
-                                            Kerala, India
+                                            Tirur, Malappuram, Kerala - 676101
                                         </p>
                                     </div>
                                 </div>

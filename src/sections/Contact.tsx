@@ -233,8 +233,8 @@ ${formData.message}
                       Location
                     </p>
 
-                    <p className="mt-2 text-sm text-white sm:text-base">
-                      Kerala, India
+                    <p className="mt-2 text-sm sm:text-base text-white">
+                      Tirur, Malappuram, Kerala - 676101
                     </p>
                   </div>
                 </div>
