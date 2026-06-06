@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const links = [
   { label: "Home", href: "/" },
@@ -14,7 +15,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   // Current Path
-  const pathname = window.location.pathname;
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const onScroll = () => {
@@ -49,8 +50,8 @@ export default function Navbar() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
 
           {/* LOGO */}
-          <a
-            href="/"
+          <Link
+            to="/"
             className="flex items-center"
           >
             <img
@@ -58,7 +59,7 @@ export default function Navbar() {
               alt="Tech stack Logo"
               className="h-20 w-auto object-contain"
             />
-          </a>
+          </Link>
 
           {/* DESKTOP NAV */}
           <nav className="hidden items-center gap-3 lg:flex">
@@ -66,9 +67,9 @@ export default function Navbar() {
               const active = pathname === link.href;
 
               return (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className={`relative rounded-full px-4 py-2 text-sm transition-all duration-300 ${active
                     ? `
                   text-white
@@ -89,7 +90,7 @@ export default function Navbar() {
                   )}
 
                   {link.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -145,24 +146,27 @@ export default function Navbar() {
                 const active = pathname === link.href;
 
                 return (
-                  <motion.a
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.05 * i }}
-                    className={`relative rounded-full px-6 py-3 text-3xl font-medium transition-all duration-300 ${active
-                      ? "text-white border border-indigo-500/30 bg-indigo-500/10 shadow-[0_0_40px_rgba(99,102,241,0.55)]"
-                      : "text-zinc-400 hover:text-indigo-400"
-                      }`}
                   >
-                    {active && (
-                      <span className="absolute inset-0 rounded-full bg-indigo-500/20 blur-2xl -z-10" />
-                    )}
+                    <Link
+                      to={link.href}
+                      onClick={() => setOpen(false)}
+                      className={`block relative rounded-full px-6 py-3 text-3xl font-medium transition-all duration-300 text-center ${active
+                        ? "text-white border border-indigo-500/30 bg-indigo-500/10 shadow-[0_0_40px_rgba(99,102,241,0.55)]"
+                        : "text-zinc-400 hover:text-indigo-400"
+                        }`}
+                    >
+                      {active && (
+                        <span className="absolute inset-0 rounded-full bg-indigo-500/20 blur-2xl -z-10" />
+                      )}
 
-                    {link.label}
-                  </motion.a>
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 );
               })}
             </nav>

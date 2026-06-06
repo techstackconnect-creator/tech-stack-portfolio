@@ -15,23 +15,17 @@ export default function Footer() {
 
           {/* Brand Column (Takes 5 slots in medium screen) */}
           <div className="md:col-span-5 space-y-4">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="group flex items-center text-lg font-bold tracking-wide text-white"
             >
               {/* Q LOGO */}
-              <a
-                href="/"
-                className="flex items-center"
-              >
-                <img
-                  src="/OurLogo1.png"
-                  alt="Tech stack Logo"
-                  className="h-20 w-auto object-contain"
-                />
-              </a>
-
-            </a>
+              <img
+                src="/OurLogo1.png"
+                alt="Tech stack Logo"
+                className="h-20 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-sm">
               Riding the wave of innovation. We build high-performance web applications and digital experiences that scale.
             </p>

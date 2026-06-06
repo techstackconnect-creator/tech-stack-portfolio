@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 import {
   Rocket,
   Users,
@@ -258,13 +259,13 @@ function AboutPage() {
               Let’s turn your ideas into modern digital experiences that stand out.
             </p>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="mt-10 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-8 py-4 text-sm font-medium text-white hover:bg-indigo-500/20 hover:border-indigo-500/50 hover:shadow-[0_0_35px_rgba(99,102,241,0.45)] transition-all duration-300"
             >
               Start Your Project
               <ArrowRight className="h-5 w-5" />
-            </a>
+            </Link>
 
           </div>
         </section>
