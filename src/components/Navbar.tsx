@@ -65,7 +65,6 @@ export default function Navbar() {
           <nav className="hidden items-center gap-3 lg:flex">
             {links.map((link) => {
               const active = pathname === link.href;
-
               return (
                 <Link
                   key={link.href}
